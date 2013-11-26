@@ -1,4 +1,6 @@
 Ideas::Application.routes.draw do
+  resources :users
+
   resources :notes
 
   resources :ideas
