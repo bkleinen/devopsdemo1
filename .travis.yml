@@ -5,8 +5,11 @@ script:
 - rake
 deploy:
   provider: heroku
+  run:
+    - "rake db:migrate"
   api_key:
     secure: kOTCHCtafRxdOIWPyPxy5qpQx2mO98BR1ZwqNpZDijw4naS3WiCroYAL5s8QmPxTrq9yLgxpzNVlR3yyxtDrVIivldm1M7B3nPIvGspDiSyOkTqQ/HqHHTUoy26vql4BJVHbnU31eCy60w/t+U34xoteypcO7oQglaeLNugAMtA=
   app: immense-meadow-2688
   on:
     repo: bkleinen/devopsdemo1
+
